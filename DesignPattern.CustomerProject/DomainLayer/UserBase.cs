@@ -1,6 +1,8 @@
-﻿namespace DesignPattern.CustomerProject.DomainLayer
+﻿using DesignPattern.CustomerProject.InterfaceLayer;
+
+namespace DesignPattern.CustomerProject.DomainLayer
 {
-    public class UserBase
+    public class UserBase : ICustomer
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
@@ -8,7 +10,7 @@
         public DateTime BillDate { get; set; }
         public string Addess { get; set; }
 
-        public virtual void IsValid()
+        public void IsValid()
         {
             throw new NotImplementedException();
         }

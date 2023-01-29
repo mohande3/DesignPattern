@@ -1,19 +1,14 @@
-﻿using DesignPattern.CustomerProject.DomainLayer;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿//----------------------------------
+//-- Creator : MrMohande3 Khademi --
+//----------------------------------
+
+using DesignPattern.CustomerProject.InterfaceLayer;
 
 namespace DesignPattern.CustomerProject.ViewLayer
 {
     public partial class frmCustomer : Form
     {
-        private UserBase _user = null;
+        private ICustomer _user = null;
         public frmCustomer()
         {
             InitializeComponent();
