@@ -32,6 +32,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
                 try
                 {
                     oUser.IsValid();
+                    MessageBox.Show("Valid");
                 }
                 catch (Exception ex)
                 {
@@ -50,6 +51,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
                 try
                 {
                     oUser.IsValid();
+                    MessageBox.Show("Valid");
                 }
                 catch (Exception ex)
                 {
