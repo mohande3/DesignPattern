@@ -12,7 +12,7 @@ namespace DesignPattern.CustomerProject
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new frmCustomer());
+            Application.Run(new ViewLayer.frmCustomer());
         }
     }
 }
