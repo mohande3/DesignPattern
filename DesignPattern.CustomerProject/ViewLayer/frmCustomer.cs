@@ -47,7 +47,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
             }
             else
             {
-                _user = new Customer();
+                _user = new Lead();
             }
         }
     }
