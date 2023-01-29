@@ -156,6 +156,7 @@
             this.cmbTypeCustomer.Size = new System.Drawing.Size(138, 23);
             this.cmbTypeCustomer.TabIndex = 19;
             this.cmbTypeCustomer.Text = "Customer";
+            this.cmbTypeCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbTypeCustomer_SelectedIndexChanged);
             // 
             // label1
             // 
