@@ -42,7 +42,8 @@ namespace DesignPattern.CustomerProject.ViewLayer
                 var oUser = new Customer();
                 oUser.Name = txtName.Text;
                 oUser.PhoneNumber = txtPhone.Text;
-                oUser.BillAmount = decimal.Parse(txtBillAmount.Text);
+                oUser.BillAmount = string.IsNullOrEmpty(txtBillAmount.Text) ? 0 :
+                    decimal.Parse(txtBillAmount.Text);
                 oUser.Addess = txtAddress.Text;
                 oUser.BillDate = DateTime.Now;
                 try
