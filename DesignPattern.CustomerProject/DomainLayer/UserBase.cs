@@ -4,15 +4,21 @@ namespace DesignPattern.CustomerProject.DomainLayer
 {
     public class UserBase : ICustomer
     {
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
-        public decimal BillAmount { get; set; }
-        public DateTime BillDate { get; set; }
-        public string Addess { get; set; }
+        private IValidation<ICustomer> _validation;
+        public string Name { get; set; } = "";
+        public string PhoneNumber { get; set; } = "";
+        public decimal BillAmount { get; set; } = 0;
+        public DateTime BillDate { get; set; } = DateTime.Now;
+        public string Addess { get; set; } = "";
+
+        public UserBase(IValidation<ICustomer> validation)
+        {
+            _validation = validation;
+        }
 
         public void IsValid()
         {
-            throw new NotImplementedException();
+            _validation.IsValid(this);
         }
     }
 }

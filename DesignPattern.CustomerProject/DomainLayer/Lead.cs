@@ -8,10 +8,9 @@ namespace DesignPattern.CustomerProject.DomainLayer
 {
     public class Lead : UserBase, ICustomer
     {
-        public void IsValid()
+        public Lead(IValidation<ICustomer> _validation) : base(_validation)
         {
-            if (string.IsNullOrEmpty(Name)) { throw new Exception("Name can not be null or empty"); }
-            if (string.IsNullOrEmpty(PhoneNumber)) { throw new Exception("PhoneNumber can not be null or empty"); }
+
         }
     }
 }
