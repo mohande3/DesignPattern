@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPattern.CustomerProject.Domain\DesignPattern.CustomerProject.Domain.csproj" />
+    <ProjectReference Include="..\DesignPattern.CustomerProject.Interfaces\DesignPattern.CustomerProject.Interfaces.csproj" />
+    <ProjectReference Include="..\DesignPattern.CustomerProject.ValidationAlgorithm\DesignPattern.CustomerProject.ValidationAlgorithm.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -8,4 +8,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPattern.CustomerProject.Factory\DesignPattern.CustomerProject.Factory.csproj" />
+    <ProjectReference Include="..\DesignPattern.CustomerProject.Interfaces\DesignPattern.CustomerProject.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
