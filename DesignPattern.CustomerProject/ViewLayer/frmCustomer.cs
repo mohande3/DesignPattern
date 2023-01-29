@@ -17,7 +17,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
         public frmCustomer()
         {
             InitializeComponent();
-            _user = new Customer();
+            _user = FactoryLayer.FactoryCustomer.Create();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,14 +41,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
 
         private void cmbTypeCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbTypeCustomer.Text == "Customer")
-            {
-                _user = new Customer();
-            }
-            else
-            {
-                _user = new Lead();
-            }
+            _user = FactoryLayer.FactoryCustomer.Create(cmbTypeCustomer.Text);
         }
     }
 }
