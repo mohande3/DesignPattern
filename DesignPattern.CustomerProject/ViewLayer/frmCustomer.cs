@@ -2,6 +2,7 @@
 //-- Creator : MrMohande3 Khademi --
 //----------------------------------
 
+using DesignPattern.CustomerProject.InterfaceDal;
 using DesignPattern.CustomerProject.InterfaceLayer;
 
 namespace DesignPattern.CustomerProject.ViewLayer
@@ -12,7 +13,7 @@ namespace DesignPattern.CustomerProject.ViewLayer
         public frmCustomer()
         {
             InitializeComponent();
-            _user = FactoryLayer.FactoryCustomer.Create();
+            _user = FactoryLayer.FactoryCustomer<ICustomer>.Create();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,7 +37,18 @@ namespace DesignPattern.CustomerProject.ViewLayer
 
         private void cmbTypeCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _user = FactoryLayer.FactoryCustomer.Create(cmbTypeCustomer.Text);
+            _user = FactoryLayer.FactoryCustomer<ICustomer>.Create(
+                cmbTypeCustomer.Text.Contains("customer") ? FactoryLayer.ETypeOfData.Customer
+                 : FactoryLayer.ETypeOfData.Lead);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IDal<ICustomer> _dalCustomer = FactoryLayer.FactoryCustomer<IDal<ICustomer>>.Create(FactoryLayer.ETypeOfData.CustomerAdo);
+
+            _dalCustomer.Add(_user);
+            _dalCustomer.Save();
+
         }
     }
 }

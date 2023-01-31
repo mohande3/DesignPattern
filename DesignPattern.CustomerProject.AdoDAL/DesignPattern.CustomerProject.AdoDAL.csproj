@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DesignPattern.CustomerProject.AdoDAL\DesignPattern.CustomerProject.AdoDAL.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DesignPattern.CustomerProject.CommonDAL\DesignPattern.CustomerProject.CommonDAL.csproj" />
-    <ProjectReference Include="..\DesignPattern.CustomerProject.Domain\DesignPattern.CustomerProject.Domain.csproj" />
     <ProjectReference Include="..\DesignPattern.CustomerProject.InterfaceDal\DesignPattern.CustomerProject.InterfaceDal.csproj" />
-    <ProjectReference Include="..\DesignPattern.CustomerProject.ValidationAlgorithm\DesignPattern.CustomerProject.ValidationAlgorithm.csproj" />
+    <ProjectReference Include="..\DesignPattern.CustomerProject.Interfaces\DesignPattern.CustomerProject.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
